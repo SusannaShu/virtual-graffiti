@@ -1,0 +1,14 @@
+{
+  "name": "virtual-graffiti-paris",
+  "version": "1.0.0",
+  "description": "Mixed Reality Public Spaces – Virtual Graffiti for Cultural Heritage",
+  "main": "app.js",
+  "scripts": {
+    "start": "http-server -c-1 -p 8080"
+  },
+  "dependencies": {
+    "firebase": "^9.22.2",
+    "http-server": "^14.1.1",
+    "dotenv": "^16.3.1"
+  }
+}
