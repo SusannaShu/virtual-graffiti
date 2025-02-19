@@ -1,4 +1,7 @@
-export default {
+import { defineConfig } from 'vite'
+
+export default defineConfig({
+  base: '/virtual-graffiti/', // Replace with your repository name
   server: {
     port: 3000,
     open: true
@@ -8,4 +11,4 @@ export default {
     assetsDir: 'assets',
     sourcemap: true
   }
-} 
+}) 
