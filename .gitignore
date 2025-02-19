@@ -1,7 +1,8 @@
-# Environment variables
+# Environment files
 .env
-.env.*
-!.env.example
+.env.local
+.env.*.local
+env-config.js
 
 # Dependencies
 node_modules/
@@ -10,10 +11,9 @@ node_modules/
 dist/
 build/
 
-# IDE and OS files
-.DS_Store
-.idea/
+# IDE and editor files
 .vscode/
+.idea/
 *.swp
-*.swo
+.DS_Store
 *.log 

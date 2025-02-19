@@ -1,15 +1,15 @@
 // Configuration for the application
 export const config = {
     mapbox: {
-        accessToken: '__MAPBOX_ACCESS_TOKEN__'
+        accessToken: import.meta.env.VITE_MAPBOX_ACCESS_TOKEN || ''
     },
     firebase: {
-        apiKey: '__FIREBASE_API_KEY__',
-        authDomain: '__FIREBASE_AUTH_DOMAIN__',
-        projectId: '__FIREBASE_PROJECT_ID__',
-        storageBucket: '__FIREBASE_STORAGE_BUCKET__',
-        messagingSenderId: '__FIREBASE_MESSAGING_SENDER_ID__',
-        appId: '__FIREBASE_APP_ID__',
-        measurementId: '__FIREBASE_MEASUREMENT_ID__'
+        apiKey: import.meta.env.VITE_FIREBASE_API_KEY || '',
+        authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || '',
+        projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || '',
+        storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || '',
+        messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || '',
+        appId: import.meta.env.VITE_FIREBASE_APP_ID || '',
+        measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID || ''
     }
 }; 

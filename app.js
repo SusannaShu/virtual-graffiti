@@ -3,7 +3,7 @@ import { config } from './config.js';
 import { getFirestore, collection, addDoc, getDocs, query, where, GeoPoint } from 'https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js';
 
 // Initialize Three.js loader for GLB files
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 // Initialize Firestore
 const db = getFirestore(app);
@@ -60,6 +60,7 @@ map.on('style.load', () => {
         }
     });
 
+    /* Commented out 3D model
     // Create custom layer for 3D model
     const modelOrigin = [2.3378, 48.8644]; // Adjusted to be in the courtyard space
     const modelAltitude = 0;
@@ -80,8 +81,8 @@ map.on('style.load', () => {
             this.scene = new THREE.Scene();
 
             // Create ambient and directional lights
-            const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
-            const directionalLight = new THREE.DirectionalLight(0xffffff, 0.7);
+            const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);  // Increased ambient light
+            const directionalLight = new THREE.DirectionalLight(0xffffff, 0.9);  // Increased directional light
             directionalLight.position.set(0, -70, 100).normalize();
             
             this.scene.add(ambientLight);
@@ -94,9 +95,12 @@ map.on('style.load', () => {
                 (gltf) => {
                     this.scene.add(gltf.scene);
                     
-                    // Scale the model to fit the space
+                    // Scale the model to be massive like a sculpture
                     const scale = modelAsMercatorCoordinate.meterInMercatorCoordinateUnits();
-                    gltf.scene.scale.set(scale * 20, scale * 20, scale * 20);
+                    gltf.scene.scale.set(scale * 200, scale * 200, scale * 200);  // Increased scale by 10x
+                    
+                    // Adjust position to elevate it slightly
+                    gltf.scene.position.set(0, 0, scale * 50);  // Raised it up
                     
                     // Rotate and position the model
                     gltf.scene.rotation.set(...modelRotate);
@@ -147,6 +151,7 @@ map.on('style.load', () => {
     };
 
     map.addLayer(customLayer);
+    */
 
     // Fly to Palais Royal
     map.flyTo({
