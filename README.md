@@ -1,6 +1,6 @@
 # Mixed Reality Public Spaces – Virtual Graffiti for Cultural Heritage
 
-Play on your phone: https://susannashu.github.io/air-graffiti/
+Play on your phone: https://susannashu.github.io/virtual-graffiti/
 (only available on mobile devices, as it's easier to doodle on there!)
 
 ## Overview
